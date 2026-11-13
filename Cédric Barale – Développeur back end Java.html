@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cédric Barale – Développeur back end Java</title>
+<meta name="description" content="Cédric Barale, développeur back end Java : Spring, AWS, GCP, Kubernetes. Plus de 18 ans d’expérience.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#F5F6F8; --surface:#FFFFFF; --ink:#1B2238; --muted:#566079; --line:#D9DDE6;
+  --accent:#2447C9; --accent-soft:#E4EAFB; --star:#B86E00;
+  --serif:'Newsreader',Georgia,'Times New Roman',serif;
+  --sans:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#10141F; --surface:#171C2B; --ink:#E8EBF4; --muted:#9AA3BA; --line:#2A3148;
+    --accent:#8FA8FF; --accent-soft:#1F2748; --star:#F0B35A; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#10141F; --surface:#171C2B; --ink:#E8EBF4; --muted:#9AA3BA; --line:#2A3148;
+  --accent:#8FA8FF; --accent-soft:#1F2748; --star:#F0B35A; color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.6 var(--sans)}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.wrap{max-width:1080px;margin:0 auto;padding:2.5rem 1.25rem 4rem;display:grid;gap:3rem;grid-template-columns:1fr}
+@media(min-width:900px){.wrap{grid-template-columns:300px 1fr;gap:4rem;padding-top:4rem}
+  aside{position:sticky;top:2rem;align-self:start}}
+h1{font:600 clamp(2.6rem,6vw,3.4rem)/1.05 var(--serif);margin:0;letter-spacing:-.01em}
+.role{font:400 1.35rem/1.3 var(--serif);color:var(--accent);margin:.6rem 0 1.5rem}
+.intro{color:var(--muted);margin:0 0 1.75rem}
+.links{list-style:none;margin:0 0 2rem;padding:0;display:grid;gap:.4rem}
+.btn{display:inline-block;background:var(--accent);color:var(--bg);text-decoration:none;font-weight:500;padding:.55rem 1rem;border-radius:6px}
+.btn:hover{filter:brightness(1.1)}
+.btn:focus-visible{outline:2px solid var(--ink)}
+aside h2,main h2{font:600 1.5rem/1.2 var(--serif);margin:0 0 1rem}
+dl{margin:0 0 2rem;display:grid;gap:.9rem}
+dt{font-weight:500}
+dd{margin:0;color:var(--muted);font-size:.92rem}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;margin:0;padding:0;list-style:none}
+.chips li{background:var(--accent-soft);color:var(--ink);font-size:.82rem;padding:.2rem .6rem;border-radius:99px}
+section{margin-bottom:3.5rem}
+.timeline{list-style:none;margin:0;padding:0 0 0 1.5rem;border-left:2px solid var(--line)}
+.job{position:relative;padding:0 0 2.25rem 1rem}
+.job::before{content:"";position:absolute;left:calc(-1.5rem - 7px);top:.45rem;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.job.now::before{background:var(--accent)}
+.dates{font-size:.85rem;color:var(--muted);margin:0}
+.job h3{font:600 1.2rem/1.3 var(--serif);margin:.15rem 0 0}
+.where{color:var(--muted);font-size:.92rem;margin:0 0 .6rem}
+.job ul{margin:.4rem 0 .6rem;padding-left:1.1rem}
+.job li{margin:.2rem 0}
+.tech{font-size:.85rem;color:var(--muted);margin:.5rem 0 0}
+.tech b{color:var(--ink);font-weight:500}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:1.1rem 1.25rem}
+.grid{display:grid;gap:1rem}
+@media(min-width:640px){.grid.two{grid-template-columns:1fr 1fr}}
+.card h3{font:600 1.05rem/1.3 var(--serif);margin:0 0 .25rem}
+.card p{margin:0;color:var(--muted);font-size:.92rem}
+.skills{display:grid;gap:.9rem}
+.skills div{display:grid;gap:.3rem}
+.skills h3{font:500 .95rem/1.3 var(--sans);margin:0}
+footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padding-top:1.25rem}
+.theme{margin-left:.5rem;background:none;border:1px solid var(--line);color:var(--muted);border-radius:6px;padding:.15rem .6rem;font:inherit;cursor:pointer}
+.theme:focus-visible{outline:2px solid var(--accent)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<aside>
+  <h1>Cédric Barale</h1>
+  <p class="role">Développeur back end Java</p>
+  <p class="intro">Plus de dix-huit ans de Java, du CRM web au site PMU.fr, avec un goût pour la qualité du code et les nouvelles technologies.</p>
+  <ul class="links">
+    <li><a class="btn" href="https://github.com/cerwad" rel="noopener">Voir mon GitHub</a></li>
+    <li><a href="mailto:cedric.barale@gmail.com">cedric.barale@gmail.com</a></li>
+  </ul>
+
+  <h2>Langues</h2>
+  <dl>
+    <div><dt>Anglais, courant</dt><dd>TOEIC 885/990. Un semestre à UCL (Londres) pendant mes études d’ingénieur.</dd></div>
+  </dl>
+
+  <h2>Atouts</h2>
+  <dl>
+    <div><dt>Esprit d’entreprise</dt><dd>Force de proposition, je cherche toujours à innover.</dd></div>
+    <div><dt>Technophile</dt><dd>Impatient de tester les dernières technologies.</dd></div>
+  </dl>
+
+  <h2>Centres d’intérêt</h2>
+  <ul class="chips"><li>VTT</li><li>Pilotage</li><li>Ping-pong</li><li>Footing</li><li>Astronomie</li></ul>
+</aside>
+
+<main>
+  <section aria-labelledby="xp">
+    <h2 id="xp">Expériences professionnelles</h2>
+    <ol class="timeline">
+      <li class="job now">
+        <p class="dates">Mai 2023 – déc. 2025</p>
+        <h3>Concepteur d’application web</h3>
+        <p class="where">H24, Paris</p>
+        <p>Application de gestion de colis pour une entreprise de logistique.</p>
+        <ul>
+          <li>Récupération des ordres de livraison des clients</li>
+          <li>Mise à jour en temps réel du statut des colis</li>
+          <li>Identification des colis problématiques, avec modification manuelle possible</li>
+        </ul>
+        <p class="tech"><b>Technos :</b> Java 25, Spring Boot 3.5, Spring MVC, Spring Data, Thymeleaf, jQuery, Bootstrap</p>
+      </li>
+      <li class="job">
+        <p class="dates">Avr. 2022 – mai 2023</p>
+        <h3>Développeur back end Java</h3>
+        <p class="where">Les Mousquetaires, Châtillon</p>
+        <ul>
+          <li>Micro-services pour les sites Intermarché, Bricorama et Netto</li>
+          <li>Développement complet de la gestion des utilisateurs pour Netto</li>
+        </ul>
+        <p class="tech"><b>Technos :</b> Spring Boot 3, GCP, Kubernetes, Kafka</p>
+      </li>
+      <li class="job">
+        <p class="dates">Juin 2019 – mai 2021</p>
+        <h3>Concepteur d’applications web, auto-entrepreneur</h3>
+        <p class="where">Paris</p>
+        <ul>
+          <li>Intranet d’analyse de données de transport avec export Excel pour Ypsolom</li>
+          <li>Installation d’un NAS et d’une sauvegarde dans le cloud Amazon pour Ypsolom</li>
+          <li>Projets divers sur codeur.com et sites web personnels</li>
+        </ul>
+        <p class="tech"><b>Technos :</b> HTML 5, JS, jQuery, Bootstrap 5, Flex</p>
+      </li>
+      <li class="job">
+        <p class="dates">Mars 2018 – mai 2019</p>
+        <h3>Technical leader</h3>
+        <p class="where">PMU (Pari Mutuel Urbain), Paris</p>
+        <ul>
+          <li>Développement du back end du site PMU.fr</li>
+          <li>Étude et développement de web services de création et de gestion de compte</li>
+          <li>Migration du front end et du back end sur AWS</li>
+          <li>Qualité du code prioritaire : 90 % de couverture de tests unitaires et fonctionnels automatisés</li>
+        </ul>
+        <p class="tech"><b>Technos :</b> Java 11, Spring 3/5, Git, Maven 3, AWS</p>
+      </li>
+      <li class="job">
+        <p class="dates">Juil. 2016 – janv. 2018</p>
+        <h3>Concepteur d’applications web, auto-entrepreneur</h3>
+        <p class="where">Paris</p>
+        <ul>
+          <li>Contrats via codeur.com</li>
+          <li>30 jours-homme pour la société Aduneo</li>
+          <li>Étude d’IAM de 10 jours-homme pour Carrefour</li>
+        </ul>
+      </li>
+      <li class="job">
+        <p class="dates">Janv. – mai 2016</p>
+        <h3>Technical leader</h3>
+        <p class="where">General Electric International Inc, Massy</p>
+        <p>Gestion d’un projet de mise à jour du logiciel de gestion des enchères pour l’électricité de la Grèce.</p>
+      </li>
+      <li class="job">
+        <p class="dates">Oct. 2013 – déc. 2015</p>
+        <h3>Technical leader</h3>
+        <p class="where">Aduneo, Malakoff</p>
+        <p>Solutions de gestion d’identité qui synchronisent les annuaires de l’entreprise (AD, LDAP).</p>
+        <p class="tech"><b>Technos :</b> J2EE 6, Spring MVC, Spring Security, intégration continue</p>
+      </li>
+      <li class="job">
+        <p class="dates">Déc. 2011 – août 2013</p>
+        <h3>Architecte J2EE</h3>
+        <p class="where">Ellegiance, Paris</p>
+        <p>Conception et développement d’un CRM web hébergé sur AWS pour gérer des campagnes de publicité multicanal (mail, SMS, courrier).</p>
+        <p class="tech"><b>Technos :</b> J2EE 6, Spring, Hibernate, JSF 1.2, RichFaces 3, HTML 5, jQuery</p>
+      </li>
+      <li class="job">
+        <p class="dates">Sept. 2007 – oct. 2011</p>
+        <h3>Développeur Java</h3>
+        <p class="where">Softeam Cadextan, Paris</p>
+        <ul>
+          <li>Deux missions chez Natixis Securities sur des applications lourdes Java Swing</li>
+          <li>Une mission chez Sungard Global Trading : conception et développement d’un logiciel de suivi de performances de plateformes de trading</li>
+        </ul>
+      </li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="comp">
+    <h2 id="comp">Compétences techniques</h2>
+    <div class="skills">
+      <div><h3>Frameworks</h3><ul class="chips"><li>Spring Core, MVC, Data, Security, Boot, Batch, REST</li><li>Hibernate</li><li>JUnit</li><li>Mockito</li><li>Hamcrest</li></ul></div>
+      <div><h3>Amazon Web Services</h3><ul class="chips"><li>EC2</li><li>Lambda</li><li>ECS</li><li>SQS</li><li>Elastic Beanstalk</li><li>API Gateway</li><li>DynamoDB</li><li>RDS</li></ul></div>
+      <div><h3>Web</h3><ul class="chips"><li>HTML 5</li><li>CSS 3</li><li>JavaScript</li><li>jQuery</li><li>Bootstrap 5</li></ul></div>
+      <div><h3>Bases de données</h3><ul class="chips"><li>Oracle</li><li>Sybase</li><li>MySQL</li><li>PostgreSQL</li></ul></div>
+      <div><h3>Outils</h3><ul class="chips"><li>Maven 3</li><li>Jenkins</li><li>Nexus</li><li>SonarQube</li><li>CheckStyle</li><li>Docker</li></ul></div>
+      <div><h3>Langages</h3><ul class="chips"><li>Java</li><li>J2EE</li><li>Groovy</li><li>Grails</li><li>Python</li><li>JavaScript</li></ul></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="form">
+    <h2 id="form">Diplômes et formations</h2>
+    <div class="grid two">
+      <div class="card"><h3>Ingénieur en technologies de l’information</h3><p>EFREI, école d’ingénieurs généraliste du numérique, Villejuif. 2002 – 2007.</p></div>
+      <div class="card"><h3>Formation GCP</h3><p>Onepoint, Paris. Trois jours sur les outils Google Cloud Platform, déc. 2022 – janv. 2023.</p></div>
+      <div class="card"><h3>Formation Kubernetes</h3><p>Onepoint, Paris. Trois jours, oct. 2022.</p></div>
+      <div class="card"><h3>Formation AWS et DevOps</h3><p>Global Knowledge, Rueil-Malmaison. Trois jours d’outils de développement et trois jours de DevOps, déc. 2018.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Cédric Barale. <a href="https://github.com/cerwad" rel="noopener">github.com/cerwad</a>
+    <button class="theme" id="theme" type="button">Changer de thème</button>
+  </footer>
+</main>
+</div>
+<script>
+(function(){
+  var b=document.getElementById('theme'),r=document.documentElement;
+  b.addEventListener('click',function(){
+    var dark=r.getAttribute('data-theme')?r.getAttribute('data-theme')==='dark':matchMedia('(prefers-color-scheme: dark)').matches;
+    r.setAttribute('data-theme',dark?'light':'dark');
+  });
+})();
+</script>
+</body>
+</html>
